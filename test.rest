@@ -1,0 +1,41 @@
+POST http://localhost:3000/admin/addAdmin
+Content-Type: application/json
+
+{
+"id":1,
+"username":"Admin",
+"password":"Admin123",
+"firstname" : "Admin",
+"lastname" : "Admin"
+
+}
+###
+POST http://localhost:3000/admin/addAdmin
+Content-Type: application/json
+
+
+{"username":"mouadh",
+"password":"test456",
+"firstname" : "mouadh",
+"lastname" : "gnichi"
+}
+####
+
+POST http://localhost:5000/admin/login
+Content-Type: application/json
+
+{"username":"Admin",
+"password":"Admin123"
+}
+###
+POST http://localhost:5000/admin/addAdmin
+Content-Type: application/json
+
+{
+"id":2,
+"username":"Admin3",
+"password":"Admin123",
+"firstname" : "Admin",
+"lastname" : "Admin"
+
+}
