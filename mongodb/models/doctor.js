@@ -5,7 +5,8 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-const DoctorSchema = new mongoose.Schema({  
+const DoctorSchema = new mongoose.Schema({ 
+  _id : Number, 
   username:String,
   password : String,
   firstname: String,
