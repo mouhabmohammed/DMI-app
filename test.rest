@@ -1,5 +1,5 @@
 POST   http://localhost:3000/admin/addDoctor
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTYxNzIwNzIyMX0._QjOmSUUGSj6OZpKVx_ZywWeLRb6iOyks5UM8EzuBGA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQWRtaW4iLCJ1c2VybmFtZSI6IkFkbWluIiwiaWF0IjoxNjE3MjgwMjA3fQ.ZZNZV50Lqda57FMKR1IZfR5ZRVfXJorRb6ANEcZncm0
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
 "id":1,
-"username":"Admin",
+"username":"Admin2",
 "password":"Admin123",
 "firstname" : "Admin",
 "lastname" : "Admin"
@@ -27,10 +27,11 @@ POST http://localhost:3000/admin/addAdmin
 Content-Type: application/json
 
 
-{"username":"mouadh",
-"password":"test456",
+{"id" : 2,
+"username"  : "mouadh",
+"password"  : "test456",
 "firstname" : "mouadh",
-"lastname" : "gnichi"
+"lastname"  : "gnichi"
 }
 ####
 
@@ -41,14 +42,33 @@ Content-Type: application/json
 "password":"Admin123"
 }
 ###
-POST http://localhost:5000/admin/addAdmin
+PUT  http://localhost:3000/admin/changePwd
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWNjZXNzIjp0cnVlLCJ1c2VybmFtZSI6IkFkbWluIiwiaWF0IjoxNjE3MzY5MTExfQ.MJQsMYYtHqO9a6bjuZEBlMTo_CVTpD_2-M7ZtRtKEhk
+Content-Type: application/json
+
+{"username":"Admin",
+"oldPassword":"Admin123",
+"newPassword" : "mouhab12345"
+}
+
+###
+POST http://localhost:3000/admin/addAdmin
 Content-Type: application/json
 
 {
-"id":2,
-"username":"Admin3",
+"id":1,
+"username":"Admin",
 "password":"Admin123",
 "firstname" : "Admin",
 "lastname" : "Admin"
 
 }
+###
+POST  http://localhost:3000/doctor/login
+Content-Type: application/json
+
+{"username":"doctor",
+"password":"doctor"}
+
+###
+GET http://localhost:3000/doctor/handball/snior
